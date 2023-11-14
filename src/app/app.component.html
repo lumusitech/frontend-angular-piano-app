@@ -1,1 +1,13 @@
 <h1>Piano App 🎹</h1>
+
+<div class="piano">
+  @for(key of piano.keys; track key.id) {
+  <div
+    class="piano__key"
+    (click)="playSound(key.soundUrl)"
+    [style]="{ 'background-color': key.bgColor }"
+  >
+    {{ key.id }}
+  </div>
+  }
+</div>
